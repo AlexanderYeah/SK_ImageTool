@@ -38,6 +38,13 @@ NS_ASSUME_NONNULL_BEGIN
 /** MARK6: 获取启动图 */
 +(UIImage *)getLaunchImage;
 
+/** MARK7:图片转成Base64字符串*/
++ (NSString *)transferImgToString:(UIImage *)image;
+
+/** MARK8:Base64字符串转成图片*/
++ (UIImage *)transferStringToImg:(NSString *)baseStr;
+
+
 
 
 

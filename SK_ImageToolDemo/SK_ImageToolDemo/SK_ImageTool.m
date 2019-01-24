@@ -185,4 +185,23 @@
     return lauchImage;
 }
 
+
+
+/** MARK7:图片转成Base64字符串*/
++ (NSString *)transferImgToString:(UIImage *)image
+{    
+    NSData *imagedata = UIImagePNGRepresentation(image);
+    NSString *image64 = [imagedata base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return image64;
+}
+
+/** MARK8:Base64字符串转成图片*/
++ (UIImage *)transferStringToImg:(NSString *)baseStr
+{
+    NSData * imageData =[[NSData alloc] initWithBase64EncodedString:baseStr options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    UIImage *photo = [UIImage imageWithData:imageData ];
+    return photo;
+}
+
+
 @end
